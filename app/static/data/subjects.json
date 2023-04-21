@@ -2,7 +2,13 @@
   "CSE": {
     "I": {
       "EVEN": ["Software Development Fundamentals - II", "Electrical Science - I", "Mathematics - II", "Physics - II"],
-      "ODD": ["Software Development Fundamentals"]
+      "ODD": [
+        "Software Development Fundamentals-I",
+        "English",
+        "PHYSICS-1",
+        "Mathematics-1",
+        "Engineering Drawing and Design"
+      ]
     },
     "II": {
       "EVEN": [
@@ -16,7 +22,13 @@
         "Digital Systems",
         "Environmental Studies"
       ],
-      "ODD": []
+      "ODD": [
+        "Theoretical Foundations of Computer Science",
+        "Data Structures",
+        "Database Systems & Web",
+        "Electrical Science-2",
+        "Economics"
+      ]
     },
     "III": {
       "EVEN": [
@@ -47,7 +59,30 @@
         "Sensor Technology and Android Programming",
         "Fundamentals of Distributed and Cloud Computing"
       ],
-      "ODD": []
+      "ODD": [
+        "Principles of Management",
+        "Computer Organization and Architecture",
+        "Operating Systems and Systems Programming",
+        "POSITIVE PSYCHOLOGY",
+        "Financial Management",
+        "Introduction to Contemporary Form of Literature",
+        "SOCIOLOGY OF MEDIA",
+        "Planning and Economic Development",
+        "Technology and Culture",
+        "ENTREPRENEURSHIP DEVELOPMENT",
+        "Fundamentals of Machine Learning",
+        "Fundamentals of Computer Security",
+        "Introduction to Big Data & Data Analytics",
+        "Object Oriented Analysis and Design Using JAVA",
+        "Image Processing and Computer Vision",
+        "Indian Constitution and Traditional Knowledge",
+        "Management Accounting",
+        "Quantum Mechanics for Engineers",
+        "Materials Science",
+        "Laser Technology and Applications",
+        "NUCLEAR SCIENCE AND ENGINEERING",
+        "Matrix Computations"
+      ]
     },
     "IV": {
       "EVEN": [
@@ -69,7 +104,36 @@
         "Software Construction using Microservices & Kubernetes",
         "Cloud computing essentials: Azure and AWS"
       ],
-      "ODD": []
+      "ODD": [
+        "Social Network Analysis",
+        "Disaster Management",
+        "Networks of Life",
+        "Information Retrieval and Semantic Web",
+        " Gender Studies",
+        "Healthcare Marketplace",
+        "Stress: Biology, Behaviour and Management",
+        "Machine Learning and Natural Language Processing",
+        "Customer Relationship Management",
+        "Managerial and Communication Skills",
+        "Introduction to Deep Learning",
+        "PSYCHOLOGY OF PERSONALITY",
+        "HUMAN RESOURCE ANALYTICS",
+        "Computing for Data Science",
+        "Advanced Blockchain: A game theoretic view (CSE)",
+        "IoT Analytics",
+        "Introduction to DevOps",
+        "Big Data with Hadoop and Spark",
+        "Cryptography and its Applications ",
+        "Fog and Edge Computing",
+        "Secure Design of Software Systems",
+        "Machine Learning and Big Data (C431-12)",
+        "Ethical Hacking and Prevention",
+        "Urban Sociology",
+        "Nanoscience and Technology",
+        "Green Energy and Climate Modelling",
+        "Applied Numerical Methods",
+        "Solar Engineering"
+      ]
     }
   },
   "ECE": {
