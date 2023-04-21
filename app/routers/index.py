@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Request, Query
 from fastapi.templating import Jinja2Templates
+import json
 
 router = APIRouter()
 templates = Jinja2Templates(directory="app/templates")
@@ -16,7 +17,10 @@ async def get_subjects(
     dept: str = Query(...), year: str = Query(...), sem: str = Query(...)
 ):
     # get list of subjects for the selected department and semester
-    return ["DBMS", "ABCD"]
+
+    with open("app/static/data/subjects.json") as f:
+        data = json.loads(f.read())
+        return data[dept.upper()][year.upper()][sem.upper()]
 
 
 @router.get("/get-files")
