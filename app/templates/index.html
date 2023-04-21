@@ -4,7 +4,105 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JIIT PVQ - Previous Year Question Papers of JIIT</title>
   </head>
-  <body></body>
+  <body>
+    <div class="form-container">
+      <form action="" class="search-form">
+        <!-- Dept selector -->
+
+        <label for="dept">Select a Department:</label>
+        <select name="dept" id="dept">
+          <option value="cse">CSE</option>
+          <option value="ece">ECE</option>
+          <option value="it">IT</option>
+          <option value="biotech">Biotech</option>
+        </select>
+
+        <br />
+
+        <!-- Year selector -->
+        <label for="clgyear">Year: </label>
+        <input type="radio" id="i" name="clgyear" value="i" checked />
+        <label for="first">I</label>
+
+        <input type="radio" id="ii" name="clgyear" value="ii" />
+        <label for="second">II</label>
+
+        <input type="radio" id="iii" name="clgyear" value="iii" />
+        <label for="third">III</label>
+
+        <input type="radio" id="iv" name="clgyear" value="iv" />
+        <label for="fourth">IV</label>
+
+        <br />
+        <!-- Semester selector -->
+
+        <label for="sem">Semester: </label>
+        <input type="radio" id="even" name="sem" value="even" checked />
+        <label for="even">Even</label>
+
+        <input type="radio" id="odd" name="sem" value="odd" />
+        <label for="odd">Odd</label>
+
+        <br />
+
+        <!-- Exam -->
+        <label for="exam">Exam: </label>
+        <input type="radio" id="t1" name="exam" value="t1" checked />
+        <label for="exam">T1</label>
+
+        <input type="radio" id="t2" name="exam" value="t2" />
+        <label for="t2">T2</label>
+
+        <input type="radio" id="exam" name="exam" value="t3" />
+        <label for="t3">T3</label>
+
+        <br />
+
+        <!-- Subject selector -->
+
+        <label for="subject">Select a Subject: </label>
+        <select name="subject" id="subject"></select>
+
+        <br />
+        <button type="submit">Find Question Papers</button>
+      </form>
+    </div>
+    <script>
+      // add event listeners
+      document.querySelector("#dept").addEventListener("change", getSubjects);
+
+      document.querySelectorAll('input[name="sem"]').forEach(function (radio) {
+        radio.addEventListener("change", getSubjects);
+      });
+
+      document.querySelectorAll('input[name="clgyear"]').forEach(function (radio) {
+        radio.addEventListener("change", getSubjects);
+      });
+
+      async function getSubjects() {
+        const dept = document.querySelector("#dept").value;
+        const clgyear = document.querySelector('input[name="clgyear"]:checked').value;
+
+        const sem = document.querySelector('input[name="sem"]:checked').value;
+
+        const response = await fetch(`/subjects?dept=${dept}&year=${clgyear}&sem=${sem}`);
+        const subjects = await response.json();
+        updateSubjectOptions(subjects);
+      }
+
+      function updateSubjectOptions(subjects) {
+        const select = document.querySelector("#subject");
+        select.innerHTML = "";
+        subjects.forEach(function (subject) {
+          const option = document.createElement("option");
+          option.value = subject;
+          option.textContent = subject;
+          select.appendChild(option);
+        });
+      }
+      getSubjects();
+    </script>
+  </body>
 </html>
