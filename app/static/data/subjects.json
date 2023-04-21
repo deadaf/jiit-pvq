@@ -1,7 +1,13 @@
 {
   "CSE": {
     "I": {
-      "EVEN": ["Software Development Fundamentals - II", "Electrical Science - I", "Mathematics - II", "Physics - II"],
+      "EVEN": [
+        "Software Development Fundamentals - II",
+        "Electrical Science - I",
+        "Mathematics - II",
+        "Physics - II",
+        "LIFE SKILLS AND EFFECTIVE COMMUNICATION"
+      ],
       "ODD": [
         "Software Development Fundamentals-I",
         "English",
@@ -20,7 +26,8 @@
         "Algorithms and Problem Solving",
         "Probability and Random Processes",
         "Digital Systems",
-        "Environmental Studies"
+        "Environmental Studies",
+        "Introduction to Political Science"
       ],
       "ODD": [
         "Theoretical Foundations of Computer Science",
@@ -81,6 +88,7 @@
         "Materials Science",
         "Laser Technology and Applications",
         "NUCLEAR SCIENCE AND ENGINEERING",
+        "Basic Numerical Methods",
         "Matrix Computations"
       ]
     },
@@ -156,20 +164,139 @@
   },
   "IT": {
     "I": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Software Development Fundamentals - II",
+        "Electrical Science - I",
+        "Mathematics - II",
+        "Physics - II",
+        "LIFE SKILLS AND EFFECTIVE COMMUNICATION"
+      ],
+      "ODD": [
+      "Software Development Fundamentals-I",
+      "English",
+      "PHYSICS-1",
+      "Mathematics-1",
+      "Engineering Drawing and Design"
+    ]
     },
     "II": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Introduction to Literature",
+        "Introduction to Psychology",
+        "Introduction to Sociology",
+        "Principles of Management",
+        "Financial Accounting",
+        "Computer Organization and Architecture",
+        "Probability and Random Processes",
+        "Human Resource Management", 
+        "Digital Systems",
+        "Environmental Studies",
+        "Introduction to Political Science"
+      ],
+      "ODD": [
+        "Data Structures and Algorithms ",
+        "Theoretical Foundations of Computer Science",
+        "Database Systems & Web",
+        "Electrical Science-2",
+        "Economics"
+      ]
     },
     "III": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        " Cloud based Enterprise Systems",
+        "Data Mining And Web Algorithms",
+        "Sociology of Youth",
+        "Project Management ",
+        "COGNITIVE PSYCHOLOGY",
+        "Theatre and Performance (Value added)",
+        "Statistics ",
+        "Solid State Electronic Devices",
+        "Photovoltaic Techniques ",
+        "Medical & Industrial Applications of Nuclear Radiations",
+        "Light Emitting Diodes: Basics and Applications",
+        "Marketing Management",
+        "Operations Research ",
+        "Applied Mathematical Methods",
+        "Econometric Analysis",
+        "Social Media and Society",
+        "Global Politics",
+        "Applicational Aspects of Differential Equations",
+        "Sensor Technology and Android Programming ",
+        "Fundamentals of Distributed and Cloud Computing",
+        "Introduction to Large Scale Database Systems",
+        "Web Technology and Cyber Security",
+        "Front End Programming",
+        "Non-Linear Data Structures & Problem Solving",
+        "Problem Solving using C and C++",
+        "Java Programming",
+        "Introduction to Blockchain Technologies",
+        "Fundamentals of Soft Computing",
+        "Open Source Software Development",
+        "Concepts of Graph Theory",
+        "Development Issues and Rural Engineering",
+        "Poverty, Inequality and Human Development"
+      ],
+      "ODD": [
+        "Operating Systems and Systems Programming",
+        "POSITIVE PSYCHOLOGY ",
+        "Financial Management",
+        "Introduction to Contemporary Form of Literature",
+        "Sociology of Media",
+        "Planning and Economic Development",
+        "Matrix Computations",
+        "Quantum Mechanics for Engineers ",
+        "Materials Science",
+        "Laser Technology and Applications ",
+        "Nuclear Science and Engineering",
+        "Basic Numerical Methods",
+        "Computer Networks & Security",
+        "Entrepreneurship Development",
+        "Fundamentals of Machine Learning",
+        "Fundamentals of Computer Security",
+        "Introduction to Big Data & Data Analytics",
+        "Object Oriented Analysis and Design Using JAVA",
+        "Image Processing and Computer Vision",
+        "Indian Constitution and Traditional Knowledge",
+        "Management Accounting",
+      ]
     },
     "IV": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "International Studies",
+        "Indian Financial System",
+        "Industrial Sociology",
+        "Quality Issues In Engineering",
+        "Photonics and Applications",
+        "Data Analytics using R and Python",
+        "Agile Software Development Process",
+        "Cryptocurrency Technologies",
+        "Cloud computing essentials: Azure and AWS",
+      ],
+      "ODD": [
+        "Social Network Analysis",
+        "Networks of Life",
+        "Information Retrieval and Semantic Web",
+        "Gender Studies",
+        "Healthcare Marketplace",
+        "Stress: Biology, Behaviour and Management",
+        "Machine Learning and Natural Language Processing",
+        "Customer Relationship Management",
+        "Managerial and Communication Skills",
+        "Introduction to Deep Learning",
+        "PSYCHOLOGY OF PERSONALITY",
+        "HUMAN RESOURCE ANALYTICS",
+        "Computing for Data Science",
+        "Advanced Blockchain: A game theoretic view (CSE)",
+        "Introduction to DevOps",
+        "Big Data with Hadoop and Spark",
+        "Cryptography and its Applications ",
+        "Fog and Edge Computing",
+        "Secure Design of Software Systems",
+        "Machine Learning and Big Data",
+        "Urban Sociology",
+        "Nanoscience and Technology",
+        "Solar Engineering"
+      ]
     }
   },
   "BIOTECH": {
