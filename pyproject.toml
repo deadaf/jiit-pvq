@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "jiit-pvq"
+version = "0.1.0"
+description = ""
+authors = ["Rohit Kumar <gahlyanrohit18@gmail.com>"]
+readme = "README.md"
+packages = [{include = "jiit_pvq"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.95.1"
+Jinja2 = "^3.1.2"
+uvicorn = "^0.21.1"
+python-multipart = "^0.0.6"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
