@@ -12,6 +12,7 @@ fastapi = "^0.95.1"
 Jinja2 = "^3.1.2"
 uvicorn = "^0.21.1"
 python-multipart = "^0.0.6"
+python-decouple = "^3.8"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.3.0"

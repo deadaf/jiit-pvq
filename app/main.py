@@ -2,12 +2,13 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from .routers.index import router as index_router
+from .routers.mailer import router as mail_router
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 app.include_router(index_router, tags=["index"])
-
+app.include_router(mail_router)
 
 origins = [
     "*",
