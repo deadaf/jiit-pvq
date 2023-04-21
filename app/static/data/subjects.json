@@ -1,0 +1,74 @@
+{
+  "CSE": {
+    "I": {
+      "EVEN": ["Software Development Fundamentals - II", "Electrical Science - 1"],
+      "ODD": ["Software Development Fundamentals"]
+    },
+    "II": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "III": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "IV": {
+      "EVEN": [],
+      "ODD": []
+    }
+  },
+  "ECE": {
+    "I": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "II": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "III": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "IV": {
+      "EVEN": [],
+      "ODD": []
+    }
+  },
+  "IT": {
+    "I": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "II": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "III": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "IV": {
+      "EVEN": [],
+      "ODD": []
+    }
+  },
+  "BIOTECH": {
+    "I": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "II": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "III": {
+      "EVEN": [],
+      "ODD": []
+    },
+    "IV": {
+      "EVEN": [],
+      "ODD": []
+    }
+  }
+}
