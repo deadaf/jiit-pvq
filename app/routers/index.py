@@ -17,3 +17,8 @@ async def get_subjects(
 ):
     # get list of subjects for the selected department and semester
     return ["DBMS", "ABCD"]
+
+
+@router.get("/get-files")
+async def get_files():
+    return {"ok": True}

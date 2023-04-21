@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="form-container">
-      <form action="" class="search-form">
+      <form id="search-form">
         <!-- Dept selector -->
 
         <label for="dept">Select a Department:</label>
@@ -66,7 +66,7 @@
         <select name="subject" id="subject"></select>
 
         <br />
-        <button type="submit">Find Question Papers</button>
+        <button onclick="getFiles(event)" type="button">Find Question Papers</button>
       </form>
     </div>
     <script>
@@ -102,6 +102,22 @@
           select.appendChild(option);
         });
       }
+
+      async function getFiles() {
+        const dept = document.querySelector("#dept").value;
+        const clgyear = document.querySelector('input[name="clgyear"]:checked').value;
+        const sem = document.querySelector('input[name="sem"]:checked').value;
+        const exam = document.querySelector('input[name="exam"]:checked').value;
+        const subject = document.querySelector("#subject").value;
+
+        const response = await fetch(
+          `/get-files?dept=${dept}&year=${clgyear}&sem=${sem}&exam=${exam}&subject=${subject}`
+        );
+
+        const data = await response.json();
+        console.log(data);
+      }
+
       getSubjects();
     </script>
   </body>
