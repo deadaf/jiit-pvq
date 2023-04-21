@@ -1,19 +1,74 @@
 {
   "CSE": {
     "I": {
-      "EVEN": ["Software Development Fundamentals - II", "Electrical Science - 1"],
+      "EVEN": ["Software Development Fundamentals - II", "Electrical Science - I", "Mathematics - II", "Physics - II"],
       "ODD": ["Software Development Fundamentals"]
     },
     "II": {
-      "EVEN": [],
+      "EVEN": [
+        "Introduction to Literature",
+        "Introduction to Psychology",
+        "Introduction to Sociology",
+        "Principles of Management",
+        "Financial Accounting",
+        "Algorithms and Problem Solving",
+        "Probability and Random Processes",
+        "Digital Systems",
+        "Environmental Studies"
+      ],
       "ODD": []
     },
     "III": {
-      "EVEN": [],
+      "EVEN": [
+        "Software Engineering",
+        "Artificial Intelligence",
+        "Project Management",
+        "Cognitive Psychology",
+        "Theatre and Performance",
+        "Organizational Behavior",
+        "Statistics",
+        "Solid State Electronic Devices",
+        "Photovoltaic Techniques",
+        "Medical & industrial applications of nuclear radiations",
+        "Numerical Aptitude",
+        "Light Emitting Diodes Basics And Applications",
+        "Computer Networks and Internet of Things",
+        "Marketing Management",
+        "Operations Research",
+        "Applied Mathematical Methods",
+        "Econometric Analysis",
+        "Social Media and Society",
+        "Global Politics",
+        "Applicational Aspects of Differential Equations",
+        "Java Programming",
+        "Problem Solving using C and C++",
+        "Non-linear Data Structures& problem solving",
+        "Front End Programming",
+        "Sensor Technology and Android Programming",
+        "Fundamentals of Distributed and Cloud Computing"
+      ],
       "ODD": []
     },
     "IV": {
-      "EVEN": [],
+      "EVEN": [
+        "International Studies",
+        "Optimization Techniques",
+        "Indian Financial System",
+        "Machine Learning tools in Bioinformatics",
+        "Industrial Sociology",
+        "Knowledge Management",
+        "ITY Issues in Engineering",
+        "Photonics and Applications",
+        "Astrophysics",
+        "Plasma Physics",
+        "Multi Attribute Decision Making",
+        "Digital Forensics and Cyber Laws",
+        "Data Analytics using R and Python",
+        "Agile Software Development Process",
+        "Cryptocurrency Technologies",
+        "Software Construction using Microservices & Kubernetes",
+        "Cloud computing essentials: Azure and AWS"
+      ],
       "ODD": []
     }
   },
