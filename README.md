@@ -30,4 +30,16 @@ JIIT-PVQ is built using the following technologies:
 ```
 ### People
 
-- Rohit Kumar (21103322)
+| Enrollment | Name       |                                                                                                                                                     
+| -------------- | ---------- | 
+| 21103322       | Rohit      | 
+| 21103326       | Vishwakant |                                                                                                                                                                        |
+| 21103324       | Lakshay    |                                                                                                                                                                        |
+| 21103328       | Vaibhav    |                                                                                                                                                                        |
+| 21103315       | Monic      |                                                                                                                                                                        |
+| 21103299       | Ansh       |                                                                                                                                                                        |
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Contributing
+Contributions are welcome! Please create a pull request or issue on GitHub.
