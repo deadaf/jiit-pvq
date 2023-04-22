@@ -146,20 +146,176 @@
   },
   "ECE": {
     "I": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Mathematics-2",
+        "Physics-2",
+        "Software Development Fundamentals-II",
+        "Electrical Science-I ",
+        "Physics Lab-2 ",
+        "Software Development lab-II ",
+        "Electrical Science Lab-I",
+        "Engineering Drawing & Design"
+      ],
+      "ODD": [
+        "Mathematics-I",
+        "Physics-I",
+        "Software Development Fundamentals-I",
+        "English",
+        "Physics Lab-I",
+        "Software Development Lab-I",
+        "Workshop"
+      ]
     },
     "II": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Introduction to Literature",
+        "Introduction to Psychology",
+        "Introduction to Sociology",
+        "Principles of Management",
+        "Financial Accounting",
+        "Analogue Electronics",
+        "Analog and Digital Communication",
+        "Digital Signal Processing",
+        "Analogue Electronics Lab",
+        "Analog and Digital Communication Lab",
+        "Digital Signal Processing Lab",
+        "Life Skills"
+      ],
+      "ODD": [
+        "Probability and Random Processes",
+        "Signals & Systems",
+        "Digital Circuit Design",
+        "Environmental Science",
+        "Signals & Systems Lab",
+        "Digital Circuit Design Lab",
+        "Electrical Science-II",
+        "Electrical Science Lab-II",
+        "Economics"
+      ]
     },
     "III": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Telecommunication Networks",
+        "RF and Microwave Engineering",
+        "Digital Hardware Design",
+        "Mobile Communication",
+        "Advanced Radio Access Networks",
+        "Machine Learning for Signal Processing",
+        "Algorithms and Problem Solving",
+        "Sociology of Youth",
+        "PROJECT MANAGEMENT",
+        "COGNITIVE PSYCHOLOGY",
+        "Theatre and performance(Value added)",
+        "Organizational Behavior",
+        "Statistics",
+        "SOLID STATE ELECTRONIC DEVICES",
+        "Photovoltaic Techniques",
+        "Medical & Industrial Applications of Nuclear Radiations",
+        "LIGHT EMITTING DIODES: BASICS AND APPLICATIONS",
+        "Marketing Management",
+        "Operations Research",
+        "Applied Mathematical Methods",
+        "Econometric Analysis",
+        "Social Media and Society",
+        "Global Politics",
+        "Java Programming",
+        "Problem Solving using C and C++",
+        "Non-linear Data Structures &Problem Solving",
+        "Front End Programming",
+        "Software Development Principles and Practices",
+        "Development Issues and Rural Engineering",
+        "Poverty, Inequality and Human Development",
+        "Telecommunication Networks Lab",
+        "Minor Project-2",
+        "VLSI Design",
+        "VLSI Design Lab-11",
+        "HSS Elective - 3"
+      ],
+      "ODD": [
+        "Principles of Management",
+        "Computer Organization and Architecture",
+        "Operating Systems and Systems Programming",
+        "POSITIVE PSYCHOLOGY",
+        "Financial Management",
+        "Introduction to Contemporary Form of Literature",
+        "SOCIOLOGY OF MEDIA",
+        "Planning and Economic Development",
+        "Technology and Culture",
+        "Data Structures and Algorithms",
+        "Fundamentals of Machine Learning",
+        "Fundamentals of Computer Security",
+        "Introduction to Big Data & Data Analytics",
+        "Object Oriented Analysis and Design Using JAVA",
+        "Image Processing and Computer Vision",
+        "Management Accounting",
+        "Quantum Mechanics for Engineers",
+        "Materials Science",
+        "Laser Technology and Applications",
+        "NUCLEAR SCIENCE AND ENGINEERING",
+        "Basic Numerical Methods",
+        "Matrix Computations",
+        "Minor Project-1",
+        "Data Structures and Algorithms Lab",
+        "Electromagnetic Field Theory Lab",
+        "Python for Signal Processing & Communication",
+        "Electromagnetic Field Theory",
+        "Embedded Systems/IOT Lab",
+        "Indian Constitution & Traditional Knowledge"
+      ]
     },
     "IV": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Cognitive Communication Systems",
+        "Introduction to IOT",
+        "Multimedia Communications",
+        "Satellite Communication",
+        "Advance Topics in Wireless Communications",
+        "Advanced Microcontrollers and RTOS",
+        "Network Security",
+        "International Studies",
+        "Sonar system and acoustic imaging",
+        "Optimization Techniques",
+        "INDIAN FINANCIAL SYSTEM",
+        "Industrial Sociology",
+        "Knowledge Management",
+        "QUALITY ISSUES IN ENGINEERING",
+        "Photonics and Applications",
+        "Astrophysics",
+        "Plasma Physics",
+        "Multi Attribute Decision Making",
+        "Machine Learning tools in Bioinformatics",
+        "Major Project Part-2"
+      ],
+      "ODD": [
+        "MIMO-OFDM APPLICATION TO WIRELESS COMMUNICATION",
+        "Basics of Antenna and Wave Propagation",
+        "Fundamentals of Embedded Systems",
+        "Introduction to data analysis with R",
+        "Optical Communication",
+        "Digital Control Systems",
+        "Image Analysis and Feature Extraction",
+        "Convergence and Next Generation Networks",
+        "Deep Learning for Multimedia",
+        "Machine Learning and Statistical Pattern Recognition",
+        "Modeling and Simulation of Semiconductor Devices",
+        "Introduction to CMOS Data Converters",
+        "Disaster Management",
+        "Networks of Life",
+        "Gender Studies",
+        "Healthcare Marketplace",
+        "Stress: Biology, Behaviour and Management",
+        "Customer Relationship Management",
+        "Managerial and Communication Skills",
+        "Algorithm Analysis and Artificial Intelligence",
+        "PSYCHOLOGY OF PERSONALITY",
+        "HUMAN RESOURCE ANALYTICS",
+        "Urban Sociology",
+        "Nanoscience and Technology",
+        "Green Energy and Climate Modeling",
+        "Applied Numerical Methods",
+        "Major Project Part-1",
+        "Summer Training Viva"
+      ]
     }
   },
   "IT": {
@@ -172,12 +328,12 @@
         "LIFE SKILLS AND EFFECTIVE COMMUNICATION"
       ],
       "ODD": [
-      "Software Development Fundamentals-I",
-      "English",
-      "PHYSICS-1",
-      "Mathematics-1",
-      "Engineering Drawing and Design"
-    ]
+        "Software Development Fundamentals-I",
+        "English",
+        "PHYSICS-1",
+        "Mathematics-1",
+        "Engineering Drawing and Design"
+      ]
     },
     "II": {
       "EVEN": [
@@ -188,7 +344,7 @@
         "Financial Accounting",
         "Computer Organization and Architecture",
         "Probability and Random Processes",
-        "Human Resource Management", 
+        "Human Resource Management",
         "Digital Systems",
         "Environmental Studies",
         "Introduction to Political Science"
@@ -301,20 +457,85 @@
   },
   "BIOTECH": {
     "I": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Basic Mathematics-2",
+        "Biophysical Techniques",
+        "Electrical Science-I",
+        "Fundamentals of Computers & Programming - II",
+        "Basic Bioscience Lab",
+        "Electrical Science Lab-I",
+        "Computer Programming Lab-II",
+        "Engineering Drawing & Design"
+      ],
+      "ODD": [
+        "Basic Mathematics-1",
+        "Physics for Biotechnology",
+        "Fundamentals of Computers & Programming - I",
+        "English",
+        "Physics Lab-1",
+        "Computer Programming Lab-I",
+        "Workshop"
+      ]
     },
     "II": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "HSS Elective – 1",
+        "Microbiology",
+        "Genetics and Developmental Biology",
+        "Introduction to Bioinformatics",
+        "Microbiology Lab",
+        "Genetics and Developmental Biology Lab",
+        "Bioinformatics Lab",
+        "Life Skills"
+      ],
+      "ODD": [
+        "Probability and Statistics",
+        "Biochemistry",
+        "Thermodynamics and Chemical Processes",
+        "Environmental Science",
+        "Biochemical Techniques Lab",
+        "Thermodynamics and Chemical Processes Lab",
+        "Electrical Science-II",
+        "Electrical Science Lab-II",
+        "Economics"
+      ]
     },
     "III": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": [
+        "Immunology",
+        "Discipline Elective – 2",
+        "Discipline Elective - 3",
+        "Open Elective - 1",
+        "Selected Value Added Course",
+        "Immunology Lab",
+        "Minor Project-2",
+        "Comparative and Functional Genomics",
+        "Comparative and Functional Genomics Lab",
+        "HSS Elective - 3"
+      ],
+      "ODD": [
+        "Molecular biology and Genetic Engineering",
+        "Discipline Elective",
+        "Science Elective",
+        "Minor Project",
+        "Genetic Engineering Lab",
+        "Industrial Biotechnology Lab-1",
+        "Cell Culture Lab",
+        "Cell Culture Technology",
+        "IT Practice Lab",
+        "Indian Constitution & Traditional Knowledge"
+      ]
     },
     "IV": {
-      "EVEN": [],
-      "ODD": []
+      "EVEN": ["Discipline Elective – 7", "Discipline Elective - 8", "Open Elective -3", "Major Project Part-2"],
+      "ODD": [
+        "Discipline Elective – 4",
+        "Discipline Elective – 5",
+        "Discipline Elective - 6",
+        "Open Elective - 2",
+        "Major Project Part-1",
+        "Summer Training Viva"
+      ]
     }
   }
 }

@@ -30,9 +30,7 @@ async def get_files(dept: str, year: str, sem: str, exam: str, subject: str):
     # [q/a]year-dept-clgyr-sem-t-sub.ext
 
     pattern = re.compile(
-        r"^q-\d{4}-dept-year-sem-exam-[A-Za-z0-9_-]{5,50}\.pdf$".replace(
-            "dept", dept.upper()
-        )
+        r"^q-\d{4}-dept-year-sem-exam-sub\.pdf$".replace("dept", dept.upper())
         .replace("year", year.upper())
         .replace("sem", sem.upper())
         .replace("sub", subject.upper().replace(" ", "_"))
