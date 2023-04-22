@@ -70,6 +70,7 @@
         <button onclick="getFiles(event)" type="button">Find Question Papers</button>
       </form>
     </div>
+    <div id="files-container"></div>
     <script>
       // add event listeners
       document.querySelector("#dept").addEventListener("change", getSubjects);
@@ -116,7 +117,55 @@
         );
 
         const data = await response.json();
-        console.log(data);
+
+        const fileContainer = document.querySelector("#files-container");
+        fileContainer.innerHTML = "";
+
+        const break_line = document.createElement("br");
+        if (data.length === 0) {
+          fileContainer.textContent = "No results found.";
+        } else {
+          data.forEach(function (file) {
+            const label = document.createElement("label");
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.name = "file";
+            checkbox.value = file;
+            label.appendChild(checkbox);
+            label.appendChild(document.createTextNode(file));
+            fileContainer.appendChild(label);
+            fileContainer.appendChild(document.createElement("br"));
+          });
+
+          const selectAllButton = document.createElement("button");
+          selectAllButton.textContent = "Select All";
+          selectAllButton.addEventListener("click", function () {
+            document.querySelectorAll('input[name="file"]').forEach(function (checkbox) {
+              checkbox.checked = true;
+            });
+          });
+          fileContainer.appendChild(selectAllButton);
+
+          const downloadButton = document.createElement("button");
+          downloadButton.textContent = "Download Selected";
+          downloadButton.addEventListener("click", function () {
+            const selectedFiles = Array.from(document.querySelectorAll('input[name="file"]:checked')).map(function (
+              checkbox
+            ) {
+              return checkbox.value;
+            });
+            if (selectedFiles.length > 0) {
+              // Make post request with selected files
+              console.log("Selected files:", selectedFiles);
+            } else {
+              console.log("No files selected.");
+            }
+          });
+          fileContainer.appendChild(downloadButton);
+        }
+
+        // const container = document.querySelector(".form-container");
+        // container.appendChild(fileContainer);
       }
 
       getSubjects();
