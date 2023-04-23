@@ -102,6 +102,8 @@ async function getFiles() {
   const fileContainer = document.querySelector(".download-container");
   fileContainer.innerHTML = "";
 
+  const downloadButtons = document.createElement("div");
+
   const break_line = document.createElement("br");
   if (data.length === 0) {
     fileContainer.textContent = "No results found.";
@@ -125,7 +127,7 @@ async function getFiles() {
         checkbox.checked = true;
       });
     });
-    fileContainer.appendChild(selectAllButton);
+    downloadButtons.appendChild(selectAllButton);
 
     const downloadButton = document.createElement("button");
 
@@ -142,8 +144,9 @@ async function getFiles() {
       }
       download_container.classList.add("scroll-download");
     });
-    fileContainer.appendChild(downloadButton);
+    downloadButtons.appendChild(downloadButton);
   }
+  fileContainer.appendChild(downloadButtons);
 
   // const container = document.querySelector(".form-container");
   // container.appendChild(fileContainer);
