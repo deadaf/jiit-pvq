@@ -75,6 +75,20 @@ button.ghost {
   border-color: #ffffff;
 }
 
+button.ghost2:hover{
+  transition: all;
+  transition-duration: 300ms;
+  background-color: white;
+  color:#03a9f4;
+}
+
+button.ghost1:hover{
+  transition: all;
+  transition-duration: 300ms;
+  background-color: white;
+  color:#f43648;
+}
+
 form {
   background-color: #ffffff;
   display: flex;
@@ -325,8 +339,8 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 8px;
+  height: 8px;
   border-radius: 30%;
   border: 2px solid #ccc;
   outline: none;
@@ -350,48 +364,7 @@ input[type="radio"]:checked {
   margin-top: -10px;
 }
 
-select {
-  /* Reset Select */
-  appearance: none;
-  outline: 0;
-  border: 0;
-  box-shadow: 2px 2px 2px black;
-  /* Personalize */
-  flex: 1;
-  padding: 0 1em;
-  color: #fff;
-  background-color: var(--darkgray);
-  background-image: none;
-  cursor: pointer;
-}
-/* Remove IE arrow */
-select::-ms-expand {
-  display: none;
-}
-/* Custom Select wrapper */
-.select {
-  position: relative;
-  display: flex;
-  width: 20em;
-  height: 6em;
-  border-radius: 0.25em;
-  overflow: hidden;
-}
-/* Arrow */
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
-  background-color: #34495e;
-  transition: 0.25s all ease;
-  pointer-events: none;
-}
-/* Transition */
-.select:hover::after {
-  color: #f39c12;
-}
+
 
 .sign-in-design {
   background: rgb(55, 213, 22);

@@ -30,10 +30,17 @@
 							margin-top: 5px;
 						"
 					>
-						<label for="up-dept" style="font-weight: bold"
+						<label
+							for="up-dept"
+							style="font-weight: bold; margin-top: -5px"
 							>Select a Department :</label
 						>
-						<select class="up-menu" name="upload-dept" id="up-dept">
+						<select
+							style="margin-top: -5px; border: 2px solid black"
+							class="up-menu"
+							name="upload-dept"
+							id="up-dept"
+						>
 							<option value="cse">CSE</option>
 							<option value="ece">ECE</option>
 							<option value="it">IT</option>
@@ -51,10 +58,17 @@
 							margin-top: 3px;
 						"
 					>
-						<label for="up-year" style="font-weight: bold"
-							>Select Year:
+						<label
+							for="up-year"
+							style="font-weight: bold; margin-left: 5px"
+							>Select Year :
 						</label>
-						<select class="up-menu" name="upload-yr" id="up-year">
+						<select
+							style="border: 2px solid black"
+							class="up-menu"
+							name="upload-yr"
+							id="up-year"
+						>
 							<option value="i">I</option>
 							<option value="ii">II</option>
 							<option value="iii">III</option>
@@ -72,7 +86,7 @@
 						"
 					>
 						<label for="up-sem" style="font-weight: bold"
-							>Semester:</label
+							>Semester :</label
 						>
 						<input
 							type="radio"
@@ -101,27 +115,27 @@
 						"
 					>
 						<label for="up-exam" style="font-weight: bold"
-							>EXAM:</label
+							>EXAM :</label
 						>
 						<input
 							type="radio"
 							id="up-t1"
-							name="upload-sem"
-							value="sem"
+							name="upload-exam"
+							value="semExam"
 						/>
 						<label for="up-t1">T1</label>
 						<input
 							type="radio"
 							id="up-t2"
-							name="upload-sem"
-							value="sem"
+							name="upload-exam"
+							value="semExam"
 						/>
 						<label for="up-t2">T2</label>
 						<input
 							type="radio"
 							id="up-t3"
-							name="upload-sem"
-							value="sem"
+							name="upload-exam"
+							value="semExam"
 						/>
 						<label for="up-t3">T3</label>
 					</div>
@@ -153,7 +167,12 @@
 						<label for="dept" style="font-weight: bold"
 							>Select a Department :</label
 						>
-						<select name="dept" id="dept" class="form-select">
+						<select
+							style="border: 2px solid black"
+							name="dept"
+							id="dept"
+							class="form-select"
+						>
 							<option class="dept-sel" value="cse">CSE</option>
 							<option class="dept-sel" value="ece">ECE</option>
 							<option class="dept-sel" value="it">IT</option>
@@ -245,6 +264,7 @@
 							>Select a Subject:</label
 						>
 						<select
+							style="border: 2px solid black"
 							name="subject"
 							id="subject"
 							class="subject-select"
@@ -272,7 +292,7 @@
 						</p>
 
 						<!-- BUTTON -->
-						<button class="ghost" id="signIn">
+						<button class="ghost ghost1" id="signIn">
 							FIND QUESTION PAPERS
 						</button>
 					</div>
@@ -282,7 +302,9 @@
 							If you want to upload any previous paper ,click
 							here!
 						</p>
-						<button class="ghost" id="signUp">UPLOAD PAPER</button>
+						<button class="ghost ghost2" id="signUp">
+							UPLOAD PAPER
+						</button>
 					</div>
 				</div>
 			</div>
