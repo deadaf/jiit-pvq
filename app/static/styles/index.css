@@ -49,6 +49,7 @@ a {
 }
 
 button {
+  cursor: pointer;
   border-radius: 20px;
   border: 1px solid #000000;
   background: #000000;
@@ -91,6 +92,13 @@ input {
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
+}
+
+.form-select{
+  padding:5px;
+}
+.subject-select{
+  padding:5px;
 }
 
 .container {
@@ -235,6 +243,7 @@ input {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: aqua;
@@ -276,6 +285,12 @@ input {
   transition-duration: 2s;
   animation-timing-function: ease-in-out;
   transform: translateY(600px);
+}
+.scroll-up {
+  transition-property: transform;
+  transition-duration: 2s;
+  animation-timing-function: ease-in-out;
+  transform: translateY(-600px);
 }
 .active-download {
   animation-name: show;
@@ -321,6 +336,10 @@ input[type="radio"]:checked {
   --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
   --gray: #34495e;
   --darkgray: #2c3e50;
+}
+
+#myFile{
+  margin-top: -10px;
 }
 
 select {
