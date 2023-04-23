@@ -1,372 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>JIIT PVQ - Previous Year Question Papers of JIIT</title>
-		<link
-			rel="stylesheet"
-			href="{{ url_for('static', path = '/styles/index.css')}}"
-		/>
-	</head>
-	<body>
-		<div class="container" id="container">
-			<div class="form-container sign-up-container">
-				<form
-					action="#"
-					style="display: flex; flex-direction: column; gap: 6px"
-				>
-					<h1>Upload Paper</h1>
-					<span>Could you please upload the exam paper</span>
-					<input type="text" placeholder="Enrollnment NO." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JIIT PVQ - Previous Year Question Papers of JIIT</title>
+    <link rel="stylesheet" href="{{ url_for('static', path = '/styles/index.css')}}" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#" style="display: flex; flex-direction: column; gap: 6px">
+          <h1>Upload Paper</h1>
+          <span>Could you please upload the exam paper</span>
+          <input type="text" placeholder="Enrollnment NO." />
 
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							margin-left: -20px;
-							margin-top: 5px;
-						"
-					>
-						<label for="up-dept" style="font-weight: bold"
-							>Select a Department :</label
-						>
-						<select class="up-menu" name="upload-dept" id="up-dept">
-							<option value="cse">CSE</option>
-							<option value="ece">ECE</option>
-							<option value="it">IT</option>
-							<option value="biotech">Biotech</option>
-						</select>
-					</div>
+          <div style="display: flex; flex-direction: row; gap: 5px; margin-left: -20px; margin-top: 5px">
+            <label for="up-dept" style="font-weight: bold">Select a Department :</label>
+            <select class="up-menu" name="upload-dept" id="up-dept">
+              <option value="cse">CSE</option>
+              <option value="ece">ECE</option>
+              <option value="it">IT</option>
+              <option value="biotech">Biotech</option>
+            </select>
+          </div>
 
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							margin-top: 4px;
-							margin-left: -140px;
-							margin-top: 3px;
-						"
-					>
-						<label for="up-year" style="font-weight: bold"
-							>Select Year:
-						</label>
-						<select class="up-menu" name="upload-yr" id="up-year">
-							<option value="i">I</option>
-							<option value="ii">II</option>
-							<option value="iii">III</option>
-							<option value="iv">IV</option>
-						</select>
-					</div>
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							align-items: center;
-							justify-content: center;
-							margin-left: -20px;
-						"
-					>
-						<label for="up-sem" style="font-weight: bold"
-							>Semester:</label
-						>
-						<input
-							type="radio"
-							id="up-odd"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-odd">ODD</label>
-						<input
-							type="radio"
-							id="up-even"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-even">EVEN</label>
-					</div>
+          <div
+            style="display: flex; flex-direction: row; gap: 5px; margin-top: 4px; margin-left: -140px; margin-top: 3px"
+          >
+            <label for="up-year" style="font-weight: bold">Select Year: </label>
+            <select class="up-menu" name="upload-yr" id="up-year">
+              <option value="i">I</option>
+              <option value="ii">II</option>
+              <option value="iii">III</option>
+              <option value="iv">IV</option>
+            </select>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              gap: 5px;
+              align-items: center;
+              justify-content: center;
+              margin-left: -20px;
+            "
+          >
+            <label for="up-sem" style="font-weight: bold">Semester:</label>
+            <input type="radio" id="up-odd" name="upload-sem" value="sem" />
+            <label for="up-odd">ODD</label>
+            <input type="radio" id="up-even" name="upload-sem" value="sem" />
+            <label for="up-even">EVEN</label>
+          </div>
 
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							justify-content: center;
-							align-items: center;
-							margin-left: -40px;
-						"
-					>
-						<label for="up-exam" style="font-weight: bold"
-							>EXAM:</label
-						>
-						<input
-							type="radio"
-							id="up-t1"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-t1">T1</label>
-						<input
-							type="radio"
-							id="up-t2"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-t2">T2</label>
-						<input
-							type="radio"
-							id="up-t3"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-t3">T3</label>
-					</div>
-					<input type="text" placeholder="Enter Subject Name." />
-					<input type="file" id="myFile" name="filename" />
-					<button id="main_signup">Upload</button>
-				</form>
-			</div>
-			<!-- animation div -->
-			<div class="data-container">
-				<button href="index.html">
-					<a id="up-button" style="color: white">UPLOADED</a>
-				</button>
-			</div>
-			<!-- download option container -->
-			<div class="download-container">
-				<!-- <button>DOWNLOAD</button> -->
-			</div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              gap: 5px;
+              justify-content: center;
+              align-items: center;
+              margin-left: -40px;
+            "
+          >
+            <label for="up-exam" style="font-weight: bold">EXAM:</label>
+            <input type="radio" id="up-t1" name="upload-sem" value="sem" />
+            <label for="up-t1">T1</label>
+            <input type="radio" id="up-t2" name="upload-sem" value="sem" />
+            <label for="up-t2">T2</label>
+            <input type="radio" id="up-t3" name="upload-sem" value="sem" />
+            <label for="up-t3">T3</label>
+          </div>
+          <input type="text" placeholder="Enter Subject Name." />
+          <input type="file" id="myFile" name="filename" />
+          <button id="main_signup">Upload</button>
+        </form>
+      </div>
+      <!-- animation div -->
+      <div class="data-container">
+        <button href="index.html">
+          <a id="up-button" style="color: white">UPLOADED</a>
+        </button>
+      </div>
+      <!-- download option container -->
+      <div class="download-container">
+        <!-- <button>DOWNLOAD</button> -->
+      </div>
 
-			<div class="form-container sign-in-container">
-				<form id="search-form" class="search-form">
-					<!-- Dept selector -->
-					<div class="form-heading">
-						<h1 style="color: black; margin-bottom: 15px">
-							Download Here
-						</h1>
-					</div>
-					<div class="form-design">
-						<label for="dept" style="font-weight: bold"
-							>Select a Department :</label
-						>
-						<select name="dept" id="dept" class="form-select">
-							<option class="dept-sel" value="cse">CSE</option>
-							<option class="dept-sel" value="ece">ECE</option>
-							<option class="dept-sel" value="it">IT</option>
-							<option class="dept-sel" value="biotech">
-								Biotech
-							</option>
-						</select>
-					</div>
-					<br />
+      <div class="form-container sign-in-container">
+        <form id="search-form" class="search-form">
+          <!-- Dept selector -->
+          <div class="form-heading">
+            <h1 style="color: black; margin-bottom: 15px">Download Here</h1>
+          </div>
+          <div class="form-design">
+            <label for="dept" style="font-weight: bold">Select a Department :</label>
+            <select name="dept" id="dept" class="form-select">
+              <option class="dept-sel" value="cse">CSE</option>
+              <option class="dept-sel" value="ece">ECE</option>
+              <option class="dept-sel" value="it">IT</option>
+              <option class="dept-sel" value="biotech">Biotech</option>
+            </select>
+          </div>
+          <br />
 
-					<!-- Year selector -->
-					<div class="form-design">
-						<label
-							for="clgyear"
-							style="display: flex; font-weight: bold"
-							>Year:
-						</label>
-						<input
-							type="radio"
-							id="i"
-							name="clgyear"
-							value="i"
-							checked
-						/>
-						<label for="first" class="option-design">I</label>
+          <!-- Year selector -->
+          <div class="form-design">
+            <label for="clgyear" style="display: flex; font-weight: bold">Year: </label>
+            <input type="radio" id="i" name="clgyear" value="i" checked />
+            <label for="first" class="option-design">I</label>
 
-						<input type="radio" id="ii" name="clgyear" value="ii" />
-						<label for="second" class="option-design">II</label>
+            <input type="radio" id="ii" name="clgyear" value="ii" />
+            <label for="second" class="option-design">II</label>
 
-						<input
-							type="radio"
-							id="iii"
-							name="clgyear"
-							value="iii"
-						/>
-						<label for="third" class="option-design">III</label>
+            <input type="radio" id="iii" name="clgyear" value="iii" />
+            <label for="third" class="option-design">III</label>
 
-						<input type="radio" id="iv" name="clgyear" value="iv" />
-						<label for="fourth" class="option-design">IV</label>
-					</div>
-					<br />
-					<!-- Semester selector -->
-					<div class="form-design" style="margin-left: -29px">
-						<label for="sem" style="font-weight: bold"
-							>Semester:
-						</label>
+            <input type="radio" id="iv" name="clgyear" value="iv" />
+            <label for="fourth" class="option-design">IV</label>
+          </div>
+          <br />
+          <!-- Semester selector -->
+          <div class="form-design" style="margin-left: -29px">
+            <label for="sem" style="font-weight: bold">Semester: </label>
 
-						<input type="radio" id="odd" name="sem" value="odd" />
-						<label for="odd" class="option-design">Odd</label>
+            <input type="radio" id="odd" name="sem" value="odd" />
+            <label for="odd" class="option-design">Odd</label>
 
-						<input
-							type="radio"
-							id="even"
-							name="sem"
-							value="even"
-							checked
-						/>
-						<label for="even" class="option-design">Even</label>
-					</div>
-					<br />
+            <input type="radio" id="even" name="sem" value="even" checked />
+            <label for="even" class="option-design">Even</label>
+          </div>
+          <br />
 
-					<!-- Exam -->
-					<div class="form-design" style="margin-left: -30px">
-						<label for="exam" style="font-weight: bold"
-							>Exam:
-						</label>
-						<input
-							type="radio"
-							id="t1"
-							name="exam"
-							value="t1"
-							checked
-						/>
-						<label for="exam" class="option-design">T1</label>
+          <!-- Exam -->
+          <div class="form-design" style="margin-left: -30px">
+            <label for="exam" style="font-weight: bold">Exam: </label>
+            <input type="radio" id="t1" name="exam" value="t1" checked />
+            <label for="exam" class="option-design">T1</label>
 
-						<input type="radio" id="t2" name="exam" value="t2" />
-						<label for="t2" class="option-design">T2</label>
+            <input type="radio" id="t2" name="exam" value="t2" />
+            <label for="t2" class="option-design">T2</label>
 
-						<input type="radio" id="exam" name="exam" value="t3" />
-						<label for="t3" class="option-design">T3</label>
-					</div>
-					<br />
+            <input type="radio" id="exam" name="exam" value="t3" />
+            <label for="t3" class="option-design">T3</label>
+          </div>
+          <br />
 
-					<!-- Subject selector -->
-					<div
-						style="display: flex; flex-direction: column; gap: 5px"
-					>
-						<label for="subject" style="font-weight: bold"
-							>Select a Subject:</label
-						>
-						<select
-							name="subject"
-							id="subject"
-							class="subject-select"
-						></select>
-					</div>
-					<br />
-					<button
-						onclick="getFiles(event)"
-						type="button"
-						id="down"
-						style="cursor: pointer"
-					>
-						Find Question Papers
-					</button>
-				</form>
-			</div>
+          <!-- Subject selector -->
+          <div style="display: flex; flex-direction: column; gap: 5px">
+            <label for="subject" style="font-weight: bold">Select a Subject:</label>
+            <select name="subject" id="subject" class="subject-select"></select>
+          </div>
+          <br />
+          <button onclick="getFiles(event)" type="button" id="down" style="cursor: pointer">Find Question Papers</button>
+        </form>
+      </div>
 
-			<div class="overlay-container">
-				<div class="overlay">
-					<div class="overlay-panel overlay-left">
-						<h1>Download a paper?</h1>
-						<p>
-							If you want to download any previous year paper
-							,click here!
-						</p>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Download a paper?</h1>
+            <p>If you want to download any previous year paper ,click here!</p>
 
-						<!-- BUTTON -->
-						<button class="ghost" id="signIn">
-							FIND QUESTION PAPERS
-						</button>
-					</div>
-					<div class="overlay-panel overlay-right">
-						<h1>Hello, Friend!</h1>
-						<p>
-							If you want to upload any previous paper ,click
-							here!
-						</p>
-						<button class="ghost" id="signUp">UPLOAD PAPER</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="files-container"></div>
+            <!-- BUTTON -->
+            <button class="ghost" id="signIn">FIND QUESTION PAPERS</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>If you want to upload any previous paper ,click here!</p>
+            <button class="ghost" id="signUp">UPLOAD PAPER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="files-container"></div>
 
-		<!--footer area -->
+    <!--footer area -->
 
-		<footer class="footer">
-			<div class="waves">
-				<div class="wave" id="wave1"></div>
-				<div class="wave" id="wave2"></div>
-				<div class="wave" id="wave3"></div>
-				<div class="wave" id="wave4"></div>
-			</div>
-			<ul class="social-icon">
-				<li class="social-icon__item" id="123">
-					<a
-						class="social-icon__link"
-						href="https://www.facebook.com/vishwakant.singh.33"
-					>
-						<ion-icon
-							class="lift-icon"
-							name="logo-facebook"
-						></ion-icon>
-					</a>
-				</li>
-				<li class="social-icon__item" id="123">
-					<a class="social-icon__link" href="#">
-						<ion-icon
-							class="lift-icon"
-							name="logo-twitter"
-						></ion-icon>
-					</a>
-				</li>
-				<li class="social-icon__item" id="123">
-					<a
-						class="social-icon__link"
-						href="https://www.linkedin.com/in/rohitgahlyan"
-					>
-						<ion-icon
-							class="lift-icon"
-							name="logo-linkedin"
-						></ion-icon>
-					</a>
-				</li>
-				<li class="social-icon__item" id="123">
-					<a
-						class="social-icon__link"
-						href="https://instagram.com/lakshay_13_22?igshid=MjljNjAzYmU="
-					>
-						<ion-icon
-							class="lift-icon"
-							name="logo-instagram"
-						></ion-icon>
-					</a>
-				</li>
-			</ul>
-			<ul class="menu">
-				<li class="menu__item">
-					<a class="menu__link" href="#">Home</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">About</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">Team</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">Contact</a>
-				</li>
-			</ul>
-			<p>&copy;BNINE-BTEN | All Rights Reserved</p>
-		</footer>
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="https://www.facebook.com/vishwakant.singh.33">
+            <ion-icon class="lift-icon" name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="#">
+            <ion-icon class="lift-icon" name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="https://www.linkedin.com/in/rohitgahlyan">
+            <ion-icon class="lift-icon" name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="https://instagram.com/lakshay_13_22?igshid=MjljNjAzYmU=">
+            <ion-icon class="lift-icon" name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Home</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">About</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Team</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Contact</a>
+        </li>
+      </ul>
+      <p>&copy;BNINE-BTEN | All Rights Reserved</p>
+    </footer>
 
-		<script src="{{ url_for('static', path = '/scripts/main.js')}}"></script>
+    <script src="{{ url_for('static', path = '/scripts/main.js')}}"></script>
 
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-		></script>
-	</body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
