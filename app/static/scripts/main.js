@@ -19,6 +19,7 @@ signInButton.addEventListener("click", () => {
 });
 
 main_signup.addEventListener("click", () => {
+  alert("This Question Paper will be uploaded soon!");
   data_container.classList.add("active");
 });
 
