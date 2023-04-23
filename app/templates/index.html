@@ -25,8 +25,8 @@
       </div> -->
 			<div class="form-container sign-up-container">
 				<form action="#">
-					<h1>Upload Here</h1>
-					<span>or Check if it is already present </span>
+					<h1>Upload Paper</h1>
+					<span>Could you please upload the exam paper </span>
 					<input type="text" placeholder="Name" />
 					<input type="email" placeholder="Email" />
 					<input type="password" placeholder="Password" />
@@ -35,7 +35,13 @@
 			</div>
 			<!-- animation div -->
 			<div class="data-container">
-				<button>Proceed</button>
+				<button href="index.html">
+					<a href="/" style="color: white">UPLOADED</a>
+				</button>
+			</div>
+			<!-- download option container -->
+			<div class="download-container">
+				<button>DOWNLOAD</button>
 			</div>
 
 			<div class="form-container sign-in-container">
@@ -52,10 +58,17 @@
           <a href="#">Forgot your password?</a>
           <button>Sign In</button>
         </form> -->
-				<form id="search-form">
+				<form id="search-form" class="search-form">
 					<!-- Dept selector -->
-					<div style="display: flex; flex-direction: row">
-						<label for="dept">Select a Department:</label>
+					<div class="form-heading">
+						<h1 style="color: black; margin-bottom: 10px">
+							Download Here
+						</h1>
+					</div>
+					<div class="form-design">
+						<label for="dept" style="font-weight: bold"
+							>Select a Department:</label
+						>
 						<select name="dept" id="dept">
 							<option value="cse">CSE</option>
 							<option value="ece">ECE</option>
@@ -66,8 +79,12 @@
 					<br />
 
 					<!-- Year selector -->
-					<div style="display: flex; flex-direction: row">
-						<label for="clgyear">Year: </label>
+					<div class="form-design">
+						<label
+							for="clgyear"
+							style="display: flex; font-weight: bold"
+							>Year:
+						</label>
 						<input
 							type="radio"
 							id="i"
@@ -75,10 +92,10 @@
 							value="i"
 							checked
 						/>
-						<label for="first">I</label>
+						<label for="first" class="option-design">I</label>
 
 						<input type="radio" id="ii" name="clgyear" value="ii" />
-						<label for="second">II</label>
+						<label for="second" class="option-design">II</label>
 
 						<input
 							type="radio"
@@ -86,18 +103,20 @@
 							name="clgyear"
 							value="iii"
 						/>
-						<label for="third">III</label>
+						<label for="third" class="option-design">III</label>
 
 						<input type="radio" id="iv" name="clgyear" value="iv" />
-						<label for="fourth">IV</label>
+						<label for="fourth" class="option-design">IV</label>
 					</div>
 					<br />
 					<!-- Semester selector -->
-					<div style="display: flex; flex-direction: row">
-						<label for="sem">Semester: </label>
+					<div class="form-design">
+						<label for="sem" style="font-weight: bold"
+							>Semester:
+						</label>
 
 						<input type="radio" id="odd" name="sem" value="odd" />
-						<label for="odd">Odd</label>
+						<label for="odd" class="option-design">Odd</label>
 
 						<input
 							type="radio"
@@ -106,13 +125,15 @@
 							value="even"
 							checked
 						/>
-						<label for="even">Even</label>
+						<label for="even" class="option-design">Even</label>
 					</div>
 					<br />
 
 					<!-- Exam -->
-					<div style="display: flex; flex-direction: row">
-						<label for="exam">Exam: </label>
+					<div class="form-design">
+						<label for="exam" style="font-weight: bold"
+							>Exam:
+						</label>
 						<input
 							type="radio"
 							id="t1"
@@ -120,23 +141,27 @@
 							value="t1"
 							checked
 						/>
-						<label for="exam">T1</label>
+						<label for="exam" class="option-design">T1</label>
 
 						<input type="radio" id="t2" name="exam" value="t2" />
-						<label for="t2">T2</label>
+						<label for="t2" class="option-design">T2</label>
 
 						<input type="radio" id="exam" name="exam" value="t3" />
-						<label for="t3">T3</label>
+						<label for="t3" class="option-design">T3</label>
 					</div>
 					<br />
 
 					<!-- Subject selector -->
-					<div style="display: flex; flex-direction: row">
-						<label for="subject">Select a Subject: </label>
+					<div
+						style="display: flex; flex-direction: column; gap: 5px"
+					>
+						<label for="subject" style="font-weight: bold"
+							>Select a Subject:
+						</label>
 						<select name="subject" id="subject"></select>
 					</div>
 					<br />
-					<button onclick="getFiles(event)" type="button">
+					<button onclick="getFiles(event)" type="button" id="down">
 						Find Question Papers
 					</button>
 				</form>
@@ -145,11 +170,13 @@
 			<div class="overlay-container">
 				<div class="overlay">
 					<div class="overlay-panel overlay-left">
-						<h1>Welcome Back!</h1>
+						<h1>Download a paper?</h1>
 						<p>
-							To keep connected with us please login with your
-							personal info
+							If you want to download any previous year paper
+							,click here!
 						</p>
+
+						<!-- BUTTON -->
 						<button class="ghost" id="signIn">
 							FIND QUESTION PAPERS
 						</button>
@@ -157,17 +184,84 @@
 					<div class="overlay-panel overlay-right">
 						<h1>Hello, Friend!</h1>
 						<p>
-							Enter your personal details and start journey with
-							us
+							If you want to upload any previous paper ,click
+							here!
 						</p>
-						<button class="ghost" id="signUp">
-							REQUEST AN UPLOAD
-						</button>
+						<button class="ghost" id="signUp">UPLOAD PAPER</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="files-container"></div>
+
+		<!--footer area -->
+
+		<footer class="footer">
+			<div class="waves">
+				<div class="wave" id="wave1"></div>
+				<div class="wave" id="wave2"></div>
+				<div class="wave" id="wave3"></div>
+				<div class="wave" id="wave4"></div>
+			</div>
+			<ul class="social-icon">
+				<li class="social-icon__item" id="123">
+					<a
+						class="social-icon__link"
+						href="https://www.facebook.com/vishwakant.singh.33"
+					>
+						<ion-icon
+							class="lift-icon"
+							name="logo-facebook"
+						></ion-icon>
+					</a>
+				</li>
+				<li class="social-icon__item" id="123">
+					<a class="social-icon__link" href="#">
+						<ion-icon
+							class="lift-icon"
+							name="logo-twitter"
+						></ion-icon>
+					</a>
+				</li>
+				<li class="social-icon__item" id="123">
+					<a
+						class="social-icon__link"
+						href="https://www.linkedin.com/in/rohitgahlyan"
+					>
+						<ion-icon
+							class="lift-icon"
+							name="logo-linkedin"
+						></ion-icon>
+					</a>
+				</li>
+				<li class="social-icon__item" id="123">
+					<a
+						class="social-icon__link"
+						href="https://instagram.com/lakshay_13_22?igshid=MjljNjAzYmU="
+					>
+						<ion-icon
+							class="lift-icon"
+							name="logo-instagram"
+						></ion-icon>
+					</a>
+				</li>
+			</ul>
+			<ul class="menu">
+				<li class="menu__item">
+					<a class="menu__link" href="#">Home</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">About</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">Team</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link" href="#">Contact</a>
+				</li>
+			</ul>
+			<p>&copy;BNINE-BTEN | All Rights Reserved</p>
+		</footer>
 
 		<style>
 			@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
@@ -420,21 +514,261 @@
 				animation-duration: 2s;
 				animation-timing-function: ease-in-out;
 				opacity: 1;
-				z-index: 500;
+				z-index: 5000;
 			}
 
 			@keyframes showpop {
+				from {
+					transform: translateY(-600px);
+				}
+				to {
+					transform: translateY(0px);
+				}
+			}
+			.download-container {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: aqua;
+				/* transition: all 200ms linear; */
+				z-index: 0;
+				opacity: 0;
+			}
+
+			.scroll-download {
+				transition-property: transform;
+				transition-duration: 2s;
+				animation-timing-function: ease-in-out;
+				transform: translateY(600px);
+			}
+			.active-download {
+				animation-name: show;
+				animation-duration: 2s;
+				animation-timing-function: ease-in-out;
+				opacity: 1;
+				z-index: 5000;
+			}
+
+			@keyframes show {
+				from {
+					transform: translateY(-600px);
+				}
+				to {
+					transform: translateY(0px);
+				}
+			}
+			.form-design {
+				display: flex;
+				gap: 10px;
+				align-items: center;
+			}
+			input[type="radio"] {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				width: 20px;
+				height: 20px;
+				border-radius: 30%;
+				border: 2px solid #ccc;
+				outline: none;
+				transition: border-color 0.2s;
+			}
+			input[type="radio"]:checked {
+				border-color: #2196f3;
+			}
+			.option-design {
+				font-size: 20px;
+			}
+
+			/* select option */
+			:root {
+				--background-gradient: linear-gradient(
+					30deg,
+					#f39c12 30%,
+					#f1c40f
+				);
+				--gray: #34495e;
+				--darkgray: #2c3e50;
+			}
+
+			select {
+				/* Reset Select */
+				appearance: none;
+				outline: 0;
+				border: 0;
+				box-shadow: 2px 2px 2px black;
+				/* Personalize */
+				flex: 1;
+				padding: 0 1em;
+				color: #fff;
+				background-color: var(--darkgray);
+				background-image: none;
+				cursor: pointer;
+			}
+			/* Remove IE arrow */
+			select::-ms-expand {
+				display: none;
+			}
+			/* Custom Select wrapper */
+			.select {
+				position: relative;
+				display: flex;
+				width: 20em;
+				height: 6em;
+				border-radius: 0.25em;
+				overflow: hidden;
+			}
+			/* Arrow */
+			.select::after {
+				content: "\25BC";
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 1em;
+				background-color: #34495e;
+				transition: 0.25s all ease;
+				pointer-events: none;
+			}
+			/* Transition */
+			.select:hover::after {
+				color: #f39c12;
+			}
+
+			.sign-in-design {
+				background: rgb(55, 213, 22);
+				background: linear-gradient(
+					90deg,
+					rgba(55, 213, 22, 1) 0%,
+					rgba(25, 212, 148, 1) 0%,
+					rgba(0, 212, 255, 1) 100%
+				);
+			}
+			.footer {
+				width: 100%;
+				background: #3586ff;
+				min-height: 100px;
+				padding: 20px 50px;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				flex-direction: column;
+				position: absolute;
+				bottom: -10%;
+				margin-top: 80px;
+				z-index: -1;
+			}
+
+			.social-icon,
+			.menu {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 10px 0;
+				flex-wrap: wrap;
+			}
+
+			.social-icon__item,
+			.menu__item {
+				list-style: none;
+			}
+
+			.social-icon__item {
+				margin-bottom: -20px;
+				padding-bottom: 12px;
+			}
+
+			.social-icon__link {
+				font-size: 2rem;
+				color: #fff;
+				margin: 0 10px;
+				display: inline-block;
+				transition: 0.5s;
+			}
+
+			.social-icon__item:hover {
+				border: #000000;
+				transform: translateY(-10px);
+			}
+
+			.menu__link {
+				font-size: 1.2rem;
+				color: #fff;
+				margin: 0 10px;
+				display: inline-block;
+				transition: 0.5s;
+				text-decoration: none;
+				opacity: 0.75;
+				font-weight: 300;
+			}
+
+			.menu__link:hover {
+				opacity: 1;
+			}
+
+			.footer p {
+				color: #fff;
+				margin: 15px 0 10px 0;
+				font-size: 1rem;
+				font-weight: 300;
+			}
+
+			.wave {
+				position: absolute;
+				top: -100px;
+				left: 0;
+				width: 100%;
+				height: 100px;
+				background: url("https://i.ibb.co/wQZVxxk/wave.png");
+				background-size: 1000px 100px;
+			}
+
+			.wave#wave1 {
+				z-index: 1000;
+				opacity: 1;
+				bottom: 0;
+				animation: animateWaves 4s linear infinite;
+			}
+
+			.wave#wave2 {
+				z-index: 999;
+				opacity: 0.5;
+				bottom: 10px;
+				animation: animate 4s linear infinite !important;
+			}
+
+			.wave#wave3 {
+				z-index: 1000;
+				opacity: 0.2;
+				bottom: 15px;
+				animation: animateWaves 3s linear infinite;
+			}
+
+			.wave#wave4 {
+				z-index: 999;
+				opacity: 0.7;
+				bottom: 20px;
+				animation: animate 3s linear infinite;
+			}
+
+			@keyframes animateWaves {
 				0% {
-					transform: translateY(-786px);
-				}
-				25% {
-					transform: translateY(-550px);
-				}
-				50% {
-					transform: translateY(-400px);
+					background-position-x: 1000px;
 				}
 				100% {
-					transform: translateY(0px);
+					background-positon-x: 0px;
+				}
+			}
+
+			@keyframes animate {
+				0% {
+					background-position-x: -1000px;
+				}
+				100% {
+					background-positon-x: 0px;
 				}
 			}
 		</style>
@@ -444,8 +778,12 @@
 			const signInButton = document.getElementById("signIn");
 			const container = document.getElementById("container");
 			const main_signup = document.getElementById("main_signup");
+			const down = document.getElementById("down");
 			const body = document.querySelector("body");
 			const data_container = document.querySelector(".data-container");
+			const download_container = document.querySelector(
+				".download-container"
+			);
 
 			signUpButton.addEventListener("click", () => {
 				container.classList.add("right-panel-active");
@@ -460,6 +798,10 @@
 
 			main_signup.addEventListener("click", () => {
 				data_container.classList.add("active");
+			});
+
+			down.addEventListener("click", () => {
+				download_container.classList.add("active-download");
 			});
 
 			// add event listeners
@@ -526,8 +868,9 @@
 
 				const data = await response.json();
 
-				const fileContainer =
-					document.querySelector("#files-container");
+				const fileContainer = document.querySelector(
+					".download-container"
+				);
 				fileContainer.innerHTML = "";
 
 				const break_line = document.createElement("br");
@@ -558,6 +901,7 @@
 					fileContainer.appendChild(selectAllButton);
 
 					const downloadButton = document.createElement("button");
+
 					downloadButton.textContent = "Download Selected";
 					downloadButton.addEventListener("click", function () {
 						const selectedFiles = Array.from(
@@ -573,6 +917,7 @@
 						} else {
 							console.log("No files selected.");
 						}
+						download_container.classList.add("scroll-download");
 					});
 					fileContainer.appendChild(downloadButton);
 				}
@@ -583,5 +928,13 @@
 
 			getSubjects();
 		</script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+		></script>
 	</body>
 </html>
