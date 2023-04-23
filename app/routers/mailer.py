@@ -51,7 +51,7 @@ async def send_pdf_route(email: str, files: T.List[str]):
             "plain",
         )
     )
-
+    # txts = []
     for file in files:
         filepath = os.path.join("app", "resources", file)
         if os.path.isfile(filepath):
@@ -65,6 +65,14 @@ async def send_pdf_route(email: str, files: T.List[str]):
                 "Content-Disposition", "attachment", filename=filename
             )
             message.attach(attachment)
+
+            # exampdf = ExamPDF(filepath)
+            # await exampdf.pdf_to_image()
+            # text = await exampdf.image_to_text()
+            # txts.append(text)
+
+    # print("analysing cos")
+    # await ExamPDF.analyse_cos(txts)
 
     send_email(email, message)
     return {"message": "Email sent successfully"}
