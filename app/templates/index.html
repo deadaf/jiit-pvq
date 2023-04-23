@@ -1,1058 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>JIIT PVQ - Previous Year Question Papers of JIIT</title>
-	</head>
-	<body>
-		<div class="container" id="container">
-			<!-- <div class="form-container sign-up-container">
-        <form action="#">
-          <h1>Create Account</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JIIT PVQ - Previous Year Question Papers of JIIT</title>
+    <link rel="stylesheet" href="{{ url_for('static', path = '/styles/index.css')}}" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#" style="display: flex; flex-direction: column; gap: 10px">
+          <h1>Upload Paper</h1>
+          <span>Could you please upload the exam paper</span>
+          <input type="text" placeholder="Enrollnment NO." />
+
+          <div style="display: flex; flex-direction: row; gap: 5px; margin-left: -20px; margin-top: 5px">
+            <label for="up-dept" style="font-weight: bold">Select a Department :</label>
+            <select class="up-menu" name="upload-dept" id="up-dept">
+              <option value="cse">CSE</option>
+              <option value="ece">ECE</option>
+              <option value="it">IT</option>
+              <option value="biotech">Biotech</option>
+            </select>
           </div>
-          <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button id="main_signup">Sign Up</button>
+
+          <div
+            style="display: flex; flex-direction: row; gap: 5px; margin-top: 4px; margin-left: -140px; margin-top: 3px"
+          >
+            <label for="up-year" style="font-weight: bold">Select Year: </label>
+            <select class="up-menu" name="upload-yr" id="up-year">
+              <option value="i">I</option>
+              <option value="ii">II</option>
+              <option value="iii">III</option>
+              <option value="iv">IV</option>
+            </select>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              gap: 5px;
+              align-items: center;
+              justify-content: center;
+              margin-left: -20px;
+            "
+          >
+            <label for="up-sem" style="font-weight: bold">Semester:</label>
+            <input type="radio" id="up-odd" name="upload-sem" value="sem" />
+            <label for="up-odd">ODD</label>
+            <input type="radio" id="up-even" name="upload-sem" value="sem" />
+            <label for="up-even">EVEN</label>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              gap: 5px;
+              justify-content: center;
+              align-items: center;
+              margin-left: -40px;
+            "
+          >
+            <label for="up-exam" style="font-weight: bold">EXAM:</label>
+            <input type="radio" id="up-t1" name="upload-sem" value="sem" />
+            <label for="up-t1">T1</label>
+            <input type="radio" id="up-t2" name="upload-sem" value="sem" />
+            <label for="up-t2">T2</label>
+            <input type="radio" id="up-t3" name="upload-sem" value="sem" />
+            <label for="up-t3">T3</label>
+          </div>
+          <input type="text" placeholder="Enter Subject Name." />
+          <button id="main_signup">Upload</button>
         </form>
-      </div> -->
-			<div class="form-container sign-up-container">
-				<form
-					action="#"
-					style="display: flex; flex-direction: column; gap: 10px"
-				>
-					<h1>Upload Paper</h1>
-					<span>Could you please upload the exam paper</span>
-					<input type="text" placeholder="Enrollnment NO." />
+      </div>
+      <!-- animation div -->
+      <div class="data-container">
+        <button href="index.html">
+          <a href="/" style="color: white">UPLOADED</a>
+        </button>
+      </div>
+      <!-- download option container -->
+      <div class="download-container">
+        <button>DOWNLOAD</button>
+      </div>
 
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							margin-left: -20px;
-							margin-top: 5px;
-						"
-					>
-						<label for="up-dept" style="font-weight: bold"
-							>Select a Department :</label
-						>
-						<select class="up-menu" name="upload-dept" id="up-dept">
-							<option value="cse">CSE</option>
-							<option value="ece">ECE</option>
-							<option value="it">IT</option>
-							<option value="biotech">Biotech</option>
-						</select>
-					</div>
-
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							margin-top: 4px;
-							margin-left: -140px;
-							margin-top: 3px;
-						"
-					>
-						<label for="up-year" style="font-weight: bold"
-							>Select Year:
-						</label>
-						<select class="up-menu" name="upload-yr" id="up-year">
-							<option value="i">I</option>
-							<option value="ii">II</option>
-							<option value="iii">III</option>
-							<option value="iv">IV</option>
-						</select>
-					</div>
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							align-items: center;
-							justify-content: center;
-							margin-left: -20px;
-						"
-					>
-						<label for="up-sem" style="font-weight: bold"
-							>Semester:</label
-						>
-						<input
-							type="radio"
-							id="up-odd"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-odd">ODD</label>
-						<input
-							type="radio"
-							id="up-even"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-even">EVEN</label>
-					</div>
-
-					<div
-						style="
-							display: flex;
-							flex-direction: row;
-							gap: 5px;
-							justify-content: center;
-							align-items: center;
-							margin-left: -40px;
-						"
-					>
-						<label for="up-exam" style="font-weight: bold"
-							>EXAM:</label
-						>
-						<input
-							type="radio"
-							id="up-t1"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-t1">T1</label>
-						<input
-							type="radio"
-							id="up-t2"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-t2">T2</label>
-						<input
-							type="radio"
-							id="up-t3"
-							name="upload-sem"
-							value="sem"
-						/>
-						<label for="up-t3">T3</label>
-					</div>
-					<input type="text" placeholder="Enter Subject Name." />
-					<button id="main_signup">Upload</button>
-				</form>
-			</div>
-			<!-- animation div -->
-			<div class="data-container">
-				<button href="index.html">
-					<a href="/" style="color: white">UPLOADED</a>
-				</button>
-			</div>
-			<!-- download option container -->
-			<div class="download-container">
-				<button>DOWNLOAD</button>
-			</div>
-
-			<div class="form-container sign-in-container">
-				<!-- <form action="#">
-          <h1>Sign in</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      <div class="form-container sign-in-container">
+        <form id="search-form" class="search-form">
+          <!-- Dept selector -->
+          <div class="form-heading">
+            <h1 style="color: black; margin-bottom: 15px">Download Here</h1>
           </div>
-          <span>or use your account</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password"/>
-          <a href="#">Forgot your password?</a>
-          <button>Sign In</button>
-        </form> -->
-				<form id="search-form" class="search-form">
-					<!-- Dept selector -->
-					<div class="form-heading">
-						<h1 style="color: black; margin-bottom: 15px">
-							Download Here
-						</h1>
-					</div>
-					<div class="form-design">
-						<label for="dept" style="font-weight: bold"
-							>Select a Department :</label
-						>
-						<select name="dept" id="dept" class="form-select">
-							<option class="dept-sel" value="cse">CSE</option>
-							<option class="dept-sel" value="ece">ECE</option>
-							<option class="dept-sel" value="it">IT</option>
-							<option class="dept-sel" value="biotech">
-								Biotech
-							</option>
-						</select>
-					</div>
-					<br />
-
-					<!-- Year selector -->
-					<div class="form-design">
-						<label
-							for="clgyear"
-							style="display: flex; font-weight: bold"
-							>Year:
-						</label>
-						<input
-							type="radio"
-							id="i"
-							name="clgyear"
-							value="i"
-							checked
-						/>
-						<label for="first" class="option-design">I</label>
-
-						<input type="radio" id="ii" name="clgyear" value="ii" />
-						<label for="second" class="option-design">II</label>
-
-						<input
-							type="radio"
-							id="iii"
-							name="clgyear"
-							value="iii"
-						/>
-						<label for="third" class="option-design">III</label>
-
-						<input type="radio" id="iv" name="clgyear" value="iv" />
-						<label for="fourth" class="option-design">IV</label>
-					</div>
-					<br />
-					<!-- Semester selector -->
-					<div class="form-design" style="margin-left: -29px">
-						<label for="sem" style="font-weight: bold"
-							>Semester:
-						</label>
-
-						<input type="radio" id="odd" name="sem" value="odd" />
-						<label for="odd" class="option-design">Odd</label>
-
-						<input
-							type="radio"
-							id="even"
-							name="sem"
-							value="even"
-							checked
-						/>
-						<label for="even" class="option-design">Even</label>
-					</div>
-					<br />
-
-					<!-- Exam -->
-					<div class="form-design" style="margin-left: -30px">
-						<label for="exam" style="font-weight: bold"
-							>Exam:
-						</label>
-						<input
-							type="radio"
-							id="t1"
-							name="exam"
-							value="t1"
-							checked
-						/>
-						<label for="exam" class="option-design">T1</label>
-
-						<input type="radio" id="t2" name="exam" value="t2" />
-						<label for="t2" class="option-design">T2</label>
-
-						<input type="radio" id="exam" name="exam" value="t3" />
-						<label for="t3" class="option-design">T3</label>
-					</div>
-					<br />
-
-					<!-- Subject selector -->
-					<div
-						style="display: flex; flex-direction: column; gap: 5px"
-					>
-						<label for="subject" style="font-weight: bold"
-							>Select a Subject:</label
-						>
-						<select
-							name="subject"
-							id="subject"
-							class="subject-select"
-						></select>
-					</div>
-					<br />
-					<button
-						onclick="getFiles(event)"
-						type="button"
-						id="down"
-						style="cursor: pointer"
-					>
-						Find Question Papers
-					</button>
-				</form>
-			</div>
-
-			<div class="overlay-container">
-				<div class="overlay">
-					<div class="overlay-panel overlay-left">
-						<h1>Download a paper?</h1>
-						<p>
-							If you want to download any previous year paper
-							,click here!
-						</p>
-
-						<!-- BUTTON -->
-						<button class="ghost" id="signIn">
-							FIND QUESTION PAPERS
-						</button>
-					</div>
-					<div class="overlay-panel overlay-right">
-						<h1>Hello, Friend!</h1>
-						<p>
-							If you want to upload any previous paper ,click
-							here!
-						</p>
-						<button class="ghost" id="signUp">UPLOAD PAPER</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="files-container"></div>
-
-		<!--footer area -->
-
-		<footer class="footer">
-			<div class="waves">
-				<div class="wave" id="wave1"></div>
-				<div class="wave" id="wave2"></div>
-				<div class="wave" id="wave3"></div>
-				<div class="wave" id="wave4"></div>
-			</div>
-			<ul class="social-icon">
-				<li class="social-icon__item" id="123">
-					<a
-						class="social-icon__link"
-						href="https://www.facebook.com/vishwakant.singh.33"
-					>
-						<ion-icon
-							class="lift-icon"
-							name="logo-facebook"
-						></ion-icon>
-					</a>
-				</li>
-				<li class="social-icon__item" id="123">
-					<a class="social-icon__link" href="#">
-						<ion-icon
-							class="lift-icon"
-							name="logo-twitter"
-						></ion-icon>
-					</a>
-				</li>
-				<li class="social-icon__item" id="123">
-					<a
-						class="social-icon__link"
-						href="https://www.linkedin.com/in/rohitgahlyan"
-					>
-						<ion-icon
-							class="lift-icon"
-							name="logo-linkedin"
-						></ion-icon>
-					</a>
-				</li>
-				<li class="social-icon__item" id="123">
-					<a
-						class="social-icon__link"
-						href="https://instagram.com/lakshay_13_22?igshid=MjljNjAzYmU="
-					>
-						<ion-icon
-							class="lift-icon"
-							name="logo-instagram"
-						></ion-icon>
-					</a>
-				</li>
-			</ul>
-			<ul class="menu">
-				<li class="menu__item">
-					<a class="menu__link" href="#">Home</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">About</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">Team</a>
-				</li>
-				<li class="menu__item">
-					<a class="menu__link" href="#">Contact</a>
-				</li>
-			</ul>
-			<p>&copy;BNINE-BTEN | All Rights Reserved</p>
-		</footer>
-
-		<style>
-			@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
-
-			* {
-				box-sizing: border-box;
-			}
-
-			body {
-				background: #f6f5f7;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-direction: column;
-				font-family: "Montserrat", sans-serif;
-				height: 100vh;
-				margin: -20px 0 50px;
-				background: #03a9f4;
-			}
-
-			body.right-panel-active {
-				background: #f43648;
-			}
-
-			h1 {
-				font-weight: bold;
-				margin: 0;
-			}
-
-			h2 {
-				text-align: center;
-			}
-
-			p {
-				font-size: 14px;
-				font-weight: 100;
-				line-height: 20px;
-				letter-spacing: 0.5px;
-				margin: 20px 0 30px;
-			}
-
-			span {
-				font-size: 12px;
-			}
-
-			a {
-				color: #333;
-				font-size: 14px;
-				text-decoration: none;
-				margin: 15px 0;
-			}
-
-			button {
-				border-radius: 20px;
-				border: 1px solid #000000;
-				background: #000000;
-				color: #ffffff;
-				font-size: 12px;
-				font-weight: bold;
-				padding: 12px 45px;
-				letter-spacing: 1px;
-				text-transform: uppercase;
-				transition: transform 80ms ease-in;
-			}
-
-			button:active {
-				transform: scale(0.95);
-			}
-
-			button:focus {
-				outline: none;
-			}
-
-			button.ghost {
-				background-color: transparent;
-				border-color: #ffffff;
-			}
-
-			form {
-				background-color: #ffffff;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
-				padding: 0 50px;
-				height: 100%;
-				text-align: center;
-			}
-
-			input {
-				background-color: #eee;
-				border: none;
-				padding: 12px 15px;
-				margin: 8px 0;
-				width: 100%;
-			}
-
-			.container {
-				background-color: #fff;
-				border-radius: 10px;
-				box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-					0 10px 10px rgba(0, 0, 0, 0.22);
-				position: relative;
-				overflow: hidden;
-				width: 768px;
-				max-width: 100%;
-				min-height: 480px;
-			}
-
-			.form-container {
-				position: absolute;
-				top: 0;
-				height: 100%;
-				transition: all 0.5s ease-in-out;
-			}
-
-			.sign-in-container {
-				left: 0;
-				width: 50%;
-				z-index: 2;
-			}
-
-			.container.right-panel-active .sign-in-container {
-				transform: translateX(100%);
-			}
-
-			.sign-up-container {
-				left: 0;
-				width: 50%;
-				opacity: 0;
-				z-index: 1;
-			}
-
-			.container.right-panel-active .sign-up-container {
-				transform: translateX(100%);
-				opacity: 1;
-				z-index: 5;
-				animation: show 0.5s;
-			}
-
-			@keyframes show {
-				0%,
-				49.99% {
-					opacity: 0;
-					z-index: 1;
-				}
-
-				50%,
-				100% {
-					opacity: 1;
-					z-index: 5;
-				}
-			}
-
-			.overlay-container {
-				position: absolute;
-				top: 0;
-				left: 50%;
-				width: 50%;
-				height: 100%;
-				overflow: hidden;
-				transition: transform 0.3s ease-in-out;
-				z-index: 100;
-			}
-
-			.container.right-panel-active .overlay-container {
-				transform: translateX(-100%);
-			}
-
-			.overlay {
-				background: #f43648;
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: 0 0;
-				color: #ffffff;
-				position: relative;
-				left: -100%;
-				height: 100%;
-				width: 200%;
-				transform: translateX(0);
-				transition: transform 0.2s ease-in-out;
-			}
-
-			.container.right-panel-active .overlay {
-				transform: translateX(50%);
-			}
-
-			.overlay-panel {
-				position: absolute;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				flex-direction: column;
-				padding: 0 40px;
-				text-align: center;
-				top: 0;
-				height: 100%;
-				width: 50%;
-				transform: translateX(0);
-				transition: transform 0.2s ease-in-out;
-			}
-
-			.overlay-left {
-				transform: translateX(-20%);
-			}
-
-			.container.right-panel-active .overlay-left {
-				transform: translateX(0);
-			}
-
-			.overlay-right {
-				right: 0;
-				transform: translateX(0);
-				background: #03a9f4;
-			}
-
-			.container.right-panel-active .overlay-right {
-				transform: translateX(20%);
-			}
-
-			.social-container {
-				margin: 20px 0;
-			}
-
-			.social-container a {
-				border: 1px solid #dddddd;
-				border-radius: 50%;
-				display: inline-flex;
-				justify-content: center;
-				align-items: center;
-				margin: 0 5px;
-				height: 40px;
-				width: 40px;
-			}
-
-			.data-container {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background-color: aqua;
-				/* transition: all 200ms linear; */
-				z-index: 0;
-				opacity: 0;
-			}
-			.active {
-				animation-name: showpop;
-				animation-duration: 2s;
-				animation-timing-function: ease-in-out;
-				opacity: 1;
-				z-index: 5000;
-			}
-
-			@keyframes showpop {
-				from {
-					transform: translateY(-600px);
-				}
-				to {
-					transform: translateY(0px);
-				}
-			}
-			.download-container {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background-color: aqua;
-				/* transition: all 200ms linear; */
-				z-index: 0;
-				opacity: 0;
-			}
-
-			.scroll-download {
-				transition-property: transform;
-				transition-duration: 2s;
-				animation-timing-function: ease-in-out;
-				transform: translateY(600px);
-			}
-			.active-download {
-				animation-name: show;
-				animation-duration: 2s;
-				animation-timing-function: ease-in-out;
-				opacity: 1;
-				z-index: 5000;
-			}
-
-			@keyframes show {
-				from {
-					transform: translateY(-600px);
-				}
-				to {
-					transform: translateY(0px);
-				}
-			}
-			.form-design {
-				display: flex;
-				gap: 10px;
-				align-items: center;
-			}
-			input[type="radio"] {
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				appearance: none;
-				width: 20px;
-				height: 20px;
-				border-radius: 30%;
-				border: 2px solid #ccc;
-				outline: none;
-				transition: border-color 0.2s;
-			}
-			input[type="radio"]:checked {
-				border-color: #2196f3;
-			}
-			.option-design {
-				font-size: 20px;
-			}
-
-			/* select option */
-			:root {
-				--background-gradient: linear-gradient(
-					30deg,
-					#f39c12 30%,
-					#f1c40f
-				);
-				--gray: #34495e;
-				--darkgray: #2c3e50;
-			}
-
-			select {
-				/* Reset Select */
-				appearance: none;
-				outline: 0;
-				border: 0;
-				box-shadow: 2px 2px 2px black;
-				/* Personalize */
-				flex: 1;
-				padding: 0 1em;
-				color: #fff;
-				background-color: var(--darkgray);
-				background-image: none;
-				cursor: pointer;
-			}
-			/* Remove IE arrow */
-			select::-ms-expand {
-				display: none;
-			}
-			/* Custom Select wrapper */
-			.select {
-				position: relative;
-				display: flex;
-				width: 20em;
-				height: 6em;
-				border-radius: 0.25em;
-				overflow: hidden;
-			}
-			/* Arrow */
-			.select::after {
-				content: "\25BC";
-				position: absolute;
-				top: 0;
-				right: 0;
-				padding: 1em;
-				background-color: #34495e;
-				transition: 0.25s all ease;
-				pointer-events: none;
-			}
-			/* Transition */
-			.select:hover::after {
-				color: #f39c12;
-			}
-
-			.sign-in-design {
-				background: rgb(55, 213, 22);
-				background: linear-gradient(
-					90deg,
-					rgba(55, 213, 22, 1) 0%,
-					rgba(25, 212, 148, 1) 0%,
-					rgba(0, 212, 255, 1) 100%
-				);
-			}
-			.footer {
-				width: 100%;
-				background: #3586ff;
-				min-height: 100px;
-				padding: 20px 50px;
-				display: flex;
-				justify-content: space-evenly;
-				align-items: center;
-				flex-direction: column;
-				position: absolute;
-				bottom: -10%;
-				margin-top: 80px;
-				z-index: -1;
-			}
-
-			.social-icon,
-			.menu {
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				margin: 10px 0;
-				flex-wrap: wrap;
-			}
-
-			.social-icon__item,
-			.menu__item {
-				list-style: none;
-			}
-
-			.social-icon__item {
-				margin-bottom: -20px;
-				padding-bottom: 12px;
-			}
-
-			.social-icon__link {
-				font-size: 2rem;
-				color: #fff;
-				margin: 0 10px;
-				display: inline-block;
-				transition: 0.5s;
-			}
-
-			.social-icon__item:hover {
-				border: #000000;
-				transform: translateY(-10px);
-			}
-
-			.menu__link {
-				font-size: 1.2rem;
-				color: #fff;
-				margin: 0 10px;
-				display: inline-block;
-				transition: 0.5s;
-				text-decoration: none;
-				opacity: 0.75;
-				font-weight: 300;
-			}
-
-			.menu__link:hover {
-				opacity: 1;
-			}
-
-			.footer p {
-				color: #fff;
-				margin: 15px 0 10px 0;
-				font-size: 1rem;
-				font-weight: 300;
-			}
-
-			.wave {
-				position: absolute;
-				top: -100px;
-				left: 0;
-				width: 100%;
-				height: 100px;
-				background: url("https://i.ibb.co/wQZVxxk/wave.png");
-				background-size: 1000px 100px;
-			}
-
-			.wave#wave1 {
-				z-index: 1000;
-				opacity: 1;
-				bottom: 0;
-				animation: animateWaves 4s linear infinite;
-			}
-
-			.wave#wave2 {
-				z-index: 999;
-				opacity: 0.5;
-				bottom: 10px;
-				animation: animate 4s linear infinite !important;
-			}
-
-			.wave#wave3 {
-				z-index: 1000;
-				opacity: 0.2;
-				bottom: 15px;
-				animation: animateWaves 3s linear infinite;
-			}
-
-			.wave#wave4 {
-				z-index: 999;
-				opacity: 0.7;
-				bottom: 20px;
-				animation: animate 3s linear infinite;
-			}
-
-			@keyframes animateWaves {
-				0% {
-					background-position-x: 1000px;
-				}
-				100% {
-					background-positon-x: 0px;
-				}
-			}
-
-			@keyframes animate {
-				0% {
-					background-position-x: -1000px;
-				}
-				100% {
-					background-positon-x: 0px;
-				}
-			}
-		</style>
-
-		<script>
-			const signUpButton = document.getElementById("signUp");
-			const signInButton = document.getElementById("signIn");
-			const container = document.getElementById("container");
-			const main_signup = document.getElementById("main_signup");
-			const down = document.getElementById("down");
-			const body = document.querySelector("body");
-			const data_container = document.querySelector(".data-container");
-			const download_container = document.querySelector(
-				".download-container"
-			);
-
-			signUpButton.addEventListener("click", () => {
-				container.classList.add("right-panel-active");
-				body.classList.add("right-panel-active");
-				// showData.classList.add("active");
-			});
-
-			signInButton.addEventListener("click", () => {
-				container.classList.remove("right-panel-active");
-				body.classList.remove("right-panel-active");
-			});
-
-			main_signup.addEventListener("click", () => {
-				data_container.classList.add("active");
-			});
-
-			down.addEventListener("click", () => {
-				download_container.classList.add("active-download");
-			});
-
-			// add event listeners
-			document
-				.querySelector("#dept")
-				.addEventListener("change", getSubjects);
-
-			document
-				.querySelectorAll('input[name="sem"]')
-				.forEach(function (radio) {
-					radio.addEventListener("change", getSubjects);
-				});
-
-			document
-				.querySelectorAll('input[name="clgyear"]')
-				.forEach(function (radio) {
-					radio.addEventListener("change", getSubjects);
-				});
-
-			async function getSubjects() {
-				const dept = document.querySelector("#dept").value;
-				const clgyear = document.querySelector(
-					'input[name="clgyear"]:checked'
-				).value;
-
-				const sem = document.querySelector(
-					'input[name="sem"]:checked'
-				).value;
-
-				const response = await fetch(
-					`/subjects?dept=${dept}&year=${clgyear}&sem=${sem}`
-				);
-				const subjects = await response.json();
-				updateSubjectOptions(subjects);
-			}
-
-			function updateSubjectOptions(subjects) {
-				const select = document.querySelector("#subject");
-				select.innerHTML = "";
-				subjects.forEach(function (subject) {
-					const option = document.createElement("option");
-					option.value = subject;
-					option.textContent = subject;
-					select.appendChild(option);
-				});
-			}
-
-			async function getFiles() {
-				const dept = document.querySelector("#dept").value;
-				const clgyear = document.querySelector(
-					'input[name="clgyear"]:checked'
-				).value;
-				const sem = document.querySelector(
-					'input[name="sem"]:checked'
-				).value;
-				const exam = document.querySelector(
-					'input[name="exam"]:checked'
-				).value;
-				const subject = document.querySelector("#subject").value;
-
-				const response = await fetch(
-					`/get-files?dept=${dept}&year=${clgyear}&sem=${sem}&exam=${exam}&subject=${subject}`
-				);
-
-				const data = await response.json();
-
-				const fileContainer = document.querySelector(
-					".download-container"
-				);
-				fileContainer.innerHTML = "";
-
-				const break_line = document.createElement("br");
-				if (data.length === 0) {
-					fileContainer.textContent = "No results found.";
-				} else {
-					data.forEach(function (file) {
-						const label = document.createElement("label");
-						const checkbox = document.createElement("input");
-						checkbox.type = "checkbox";
-						checkbox.name = "file";
-						checkbox.value = file;
-						label.appendChild(checkbox);
-						label.appendChild(document.createTextNode(file));
-						fileContainer.appendChild(label);
-						fileContainer.appendChild(document.createElement("br"));
-					});
-
-					const selectAllButton = document.createElement("button");
-					selectAllButton.textContent = "Select All";
-					selectAllButton.addEventListener("click", function () {
-						document
-							.querySelectorAll('input[name="file"]')
-							.forEach(function (checkbox) {
-								checkbox.checked = true;
-							});
-					});
-					fileContainer.appendChild(selectAllButton);
-
-					const downloadButton = document.createElement("button");
-
-					downloadButton.textContent = "Download Selected";
-					downloadButton.addEventListener("click", function () {
-						const selectedFiles = Array.from(
-							document.querySelectorAll(
-								'input[name="file"]:checked'
-							)
-						).map(function (checkbox) {
-							return checkbox.value;
-						});
-						if (selectedFiles.length > 0) {
-							// Make post request with selected files
-							console.log("Selected files:", selectedFiles);
-						} else {
-							console.log("No files selected.");
-						}
-						download_container.classList.add("scroll-download");
-					});
-					fileContainer.appendChild(downloadButton);
-				}
-
-				// const container = document.querySelector(".form-container");
-				// container.appendChild(fileContainer);
-			}
-
-			getSubjects();
-		</script>
-		<script
-			type="module"
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-		></script>
-		<script
-			nomodule
-			src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-		></script>
-	</body>
+          <div class="form-design">
+            <label for="dept" style="font-weight: bold">Select a Department :</label>
+            <select name="dept" id="dept" class="form-select">
+              <option class="dept-sel" value="cse">CSE</option>
+              <option class="dept-sel" value="ece">ECE</option>
+              <option class="dept-sel" value="it">IT</option>
+              <option class="dept-sel" value="biotech">Biotech</option>
+            </select>
+          </div>
+          <br />
+
+          <!-- Year selector -->
+          <div class="form-design">
+            <label for="clgyear" style="display: flex; font-weight: bold">Year: </label>
+            <input type="radio" id="i" name="clgyear" value="i" checked />
+            <label for="first" class="option-design">I</label>
+
+            <input type="radio" id="ii" name="clgyear" value="ii" />
+            <label for="second" class="option-design">II</label>
+
+            <input type="radio" id="iii" name="clgyear" value="iii" />
+            <label for="third" class="option-design">III</label>
+
+            <input type="radio" id="iv" name="clgyear" value="iv" />
+            <label for="fourth" class="option-design">IV</label>
+          </div>
+          <br />
+          <!-- Semester selector -->
+          <div class="form-design" style="margin-left: -29px">
+            <label for="sem" style="font-weight: bold">Semester: </label>
+
+            <input type="radio" id="odd" name="sem" value="odd" />
+            <label for="odd" class="option-design">Odd</label>
+
+            <input type="radio" id="even" name="sem" value="even" checked />
+            <label for="even" class="option-design">Even</label>
+          </div>
+          <br />
+
+          <!-- Exam -->
+          <div class="form-design" style="margin-left: -30px">
+            <label for="exam" style="font-weight: bold">Exam: </label>
+            <input type="radio" id="t1" name="exam" value="t1" checked />
+            <label for="exam" class="option-design">T1</label>
+
+            <input type="radio" id="t2" name="exam" value="t2" />
+            <label for="t2" class="option-design">T2</label>
+
+            <input type="radio" id="exam" name="exam" value="t3" />
+            <label for="t3" class="option-design">T3</label>
+          </div>
+          <br />
+
+          <!-- Subject selector -->
+          <div style="display: flex; flex-direction: column; gap: 5px">
+            <label for="subject" style="font-weight: bold">Select a Subject:</label>
+            <select name="subject" id="subject" class="subject-select"></select>
+          </div>
+          <br />
+          <button onclick="getFiles(event)" type="button" id="down" style="cursor: pointer">Find Question Papers</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Download a paper?</h1>
+            <p>If you want to download any previous year paper ,click here!</p>
+
+            <!-- BUTTON -->
+            <button class="ghost" id="signIn">FIND QUESTION PAPERS</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>If you want to upload any previous paper ,click here!</p>
+            <button class="ghost" id="signUp">UPLOAD PAPER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="files-container"></div>
+
+    <!--footer area -->
+
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="https://www.facebook.com/vishwakant.singh.33">
+            <ion-icon class="lift-icon" name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="#">
+            <ion-icon class="lift-icon" name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="https://www.linkedin.com/in/rohitgahlyan">
+            <ion-icon class="lift-icon" name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item" id="123">
+          <a class="social-icon__link" href="https://instagram.com/lakshay_13_22?igshid=MjljNjAzYmU=">
+            <ion-icon class="lift-icon" name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Home</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">About</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Team</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Contact</a>
+        </li>
+      </ul>
+      <p>&copy;BNINE-BTEN | All Rights Reserved</p>
+    </footer>
+
+    <script src="{{ url_for('static', path = '/scripts/main.js')}}"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
