@@ -59,6 +59,35 @@ function updateSubjectOptions(subjects) {
   });
 }
 
+async function sendFiles() {
+  const selectedFiles = Array.from(document.querySelectorAll('input[name="file"]:checked')).map(function (checkbox) {
+    return checkbox.value;
+  });
+
+  const email_id = prompt("Please enter your college email ID.");
+  if (!email_id || !email_id.endsWith("mail.jiit.ac.in")) {
+    alert("Invalid Email.");
+  } else {
+    try {
+      const response = await fetch(`/send-pdf`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email_id,
+          files: selectedFiles,
+        }),
+      });
+
+      alert("We have delivered the requested files to your Email. Have fun!");
+      // Handle response here
+    } catch (error) {
+      console.error(error);
+    }
+  }
+}
+
 async function getFiles() {
   const dept = document.querySelector("#dept").value;
   const clgyear = document.querySelector('input[name="clgyear"]:checked').value;
@@ -107,9 +136,9 @@ async function getFiles() {
       });
       if (selectedFiles.length > 0) {
         // Make post request with selected files
-        console.log("Selected files:", selectedFiles);
+        sendFiles();
       } else {
-        console.log("No files selected.");
+        alert("No files selected!");
       }
       download_container.classList.add("scroll-download");
     });

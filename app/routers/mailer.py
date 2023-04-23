@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Request, Body
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
@@ -26,21 +26,10 @@ def send_email(to: str, message: MIMEMultipart):
     smtp_server.quit()
 
 
-# define route to send email
-@router.get("/send-email")
-async def send_email_route(email: str, text: str):
-    message = MIMEMultipart()
-    message["From"] = gmail_user
-    message["To"] = email
-    message["Subject"] = "Test Email"
-    message.attach(MIMEText(text, "plain"))
-
-    send_email(email, message)
-    return {"message": "Email sent successfully"}
-
-
 @router.post("/send-pdf")
-async def send_pdf_route(email: str, files: T.List[str]):
+async def send_pdf_route(
+    request: Request, email: str = Body(...), files: T.List[str] = Body(...)
+):
     message = MIMEMultipart()
     message["From"] = gmail_user
     message["To"] = email
