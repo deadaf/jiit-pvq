@@ -274,10 +274,18 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  background-color: beige;
+  flex-direction: column;
+  font-size: large;
+  font-weight: bold;
   /* transition: all 200ms linear; */
   z-index: 0;
   opacity: 0;
+}
+
+.label-select {
+  display: flex;
+  flex-direction: column;
 }
 
 .scroll-download {
