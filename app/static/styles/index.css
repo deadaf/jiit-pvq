@@ -274,6 +274,11 @@ input {
   opacity: 0;
 }
 
+.label-select {
+  display: flex;
+  flex-direction: column;
+}
+
 .scroll-download {
   transition-property: transform;
   transition-duration: 2s;

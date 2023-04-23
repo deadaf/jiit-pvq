@@ -114,8 +114,11 @@ async function getFiles() {
       checkbox.type = "checkbox";
       checkbox.name = "file";
       checkbox.value = file;
-      label.appendChild(checkbox);
       label.appendChild(document.createTextNode(file));
+      label.appendChild(checkbox);
+
+      label.style.display = "flex";
+      label.style.flexDirection = "row";
       fileContainer.appendChild(label);
       fileContainer.appendChild(document.createElement("br"));
     });
